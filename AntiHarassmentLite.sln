@@ -3,7 +3,45 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntiHarassmentLite.BackgroundHost", "AntiHarassmentLite.BackgroundHost\AntiHarassmentLite.BackgroundHost.csproj", "{328AED64-D428-457C-9732-2A84A871C2C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntiHarassmentLite.TwitchIntegration", "AntiHarassmentLite.TwitchIntegration\AntiHarassmentLite.TwitchIntegration.csproj", "{A9877D8B-1534-4144-9D1C-1EBA51BDB1E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntiHarassmentLite.Core", "AntiHarassmentLite.Core\AntiHarassmentLite.Core.csproj", "{38E92D2E-8BFB-4E56-AFCD-CAAB0EAFFF69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntiHarassmentLite.Sql", "AntiHarassmentLite.Sql\AntiHarassmentLite.Sql.csproj", "{612C3A93-76D0-4930-845F-E1AD8EFCBCBB}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AntiHarassmentLite.Database", "AntiHarassmentLite.Database\AntiHarassmentLite.Database.sqlproj", "{252B334F-8B06-44C2-A6B1-E896D4A33743}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{328AED64-D428-457C-9732-2A84A871C2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328AED64-D428-457C-9732-2A84A871C2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328AED64-D428-457C-9732-2A84A871C2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328AED64-D428-457C-9732-2A84A871C2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9877D8B-1534-4144-9D1C-1EBA51BDB1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9877D8B-1534-4144-9D1C-1EBA51BDB1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9877D8B-1534-4144-9D1C-1EBA51BDB1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9877D8B-1534-4144-9D1C-1EBA51BDB1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E92D2E-8BFB-4E56-AFCD-CAAB0EAFFF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E92D2E-8BFB-4E56-AFCD-CAAB0EAFFF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E92D2E-8BFB-4E56-AFCD-CAAB0EAFFF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E92D2E-8BFB-4E56-AFCD-CAAB0EAFFF69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612C3A93-76D0-4930-845F-E1AD8EFCBCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612C3A93-76D0-4930-845F-E1AD8EFCBCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612C3A93-76D0-4930-845F-E1AD8EFCBCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612C3A93-76D0-4930-845F-E1AD8EFCBCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252B334F-8B06-44C2-A6B1-E896D4A33743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252B334F-8B06-44C2-A6B1-E896D4A33743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252B334F-8B06-44C2-A6B1-E896D4A33743}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{252B334F-8B06-44C2-A6B1-E896D4A33743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252B334F-8B06-44C2-A6B1-E896D4A33743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252B334F-8B06-44C2-A6B1-E896D4A33743}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

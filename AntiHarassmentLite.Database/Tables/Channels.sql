@@ -1,0 +1,5 @@
+﻿CREATE TABLE [Core].[Channels]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [ChannelName] NVARCHAR(200) NOT NULL
+)
