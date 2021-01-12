@@ -63,13 +63,13 @@ namespace AntiHarassmentLite.TwitchIntegration
 
         private void Client_OnUserBanned(object sender, OnUserBannedArgs e)
         {
-            logger.LogInformation("User banned: {username}", e.UserBan.Username);
+            logger.LogInformation("User banned: {username} from channel {channel}", e.UserBan.Username, e.UserBan.Channel);
             OnUserBannedReceived?.Invoke(e.UserBan.MapToBannedEvent(dateTimeProvider));
         }
 
         private void Client_OnUserTimedout(object sender, OnUserTimedoutArgs e)
         {
-            logger.LogInformation("User timedout: {username}", e.UserTimeout.Username);
+            logger.LogInformation("User timedout: {username} from channel {channel}", e.UserTimeout.Username, e.UserTimeout.Channel);
             OnUserTimeoutReceived?.Invoke(e.UserTimeout.MapToTimedOutEvent(dateTimeProvider));
         }
 

@@ -19,14 +19,14 @@ namespace AntiHarassmentLite.BackgroundHost
         public static void ConfigureDependencies(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetRequiredValue<string>("ConnectionStrings:SqlDatabase");
-            //services.AddLogging(builder =>
-            //{
-            //    var environmentName = Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT");
-            //    if (string.Equals(environmentName, "development", StringComparison.OrdinalIgnoreCase))
-            //        builder.AddConsole();
-            //    else
-            //        builder.AddSeq(configuration.GetSection("Seq"));
-            //});
+            services.AddLogging(builder =>
+            {
+                var environmentName = Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT");
+                if (string.Equals(environmentName, "development", StringComparison.OrdinalIgnoreCase))
+                    builder.AddConsole();
+                else
+                    builder.AddSeq(configuration.GetSection("Seq"));
+            });
 
             var twitchChatSettings = new TwitchClientSettings(configuration.GetRequiredValue<string>("Twitch:Username"), configuration.GetRequiredValue<string>("Twitch:OAuth"));
             services.AddSingleton(twitchChatSettings);
