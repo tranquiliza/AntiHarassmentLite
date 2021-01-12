@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-AntiHarassmentLite.BackgroundHost-69308159-E487-44E5-8DEA-14654997D856</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AntiHarassmentLite.Core\AntiHarassmentLite.Core.csproj" />
+    <ProjectReference Include="..\AntiHarassmentLite.Sql\AntiHarassmentLite.Sql.csproj" />
+    <ProjectReference Include="..\AntiHarassmentLite.TwitchIntegration\AntiHarassmentLite.TwitchIntegration.csproj" />
+  </ItemGroup>
+</Project>
