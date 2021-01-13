@@ -44,13 +44,11 @@ namespace AntiHarassmentLite.Core
             Suspension suspension;
 
             if (RecentChatMessages.TryGetValue(key, out var chatMessages))
+            {
                 suspension = Suspension.CreateBan(userBannedEvent, chatMessages);
-            else
-                suspension = Suspension.CreateBan(userBannedEvent);
-
-            logger.LogInformation("Sent save request for: suspension for user: {username}, timestamp: {timestamp} in channel: {channelName}", userBannedEvent.Username, userBannedEvent.Timestamp, userBannedEvent.Channel);
-
-            mediator.Send(new SaveSuspensionRequest(suspension));
+                logger.LogInformation("Sent save request for: suspension for user: {username}, timestamp: {timestamp} in channel: {channelName}", userBannedEvent.Username, userBannedEvent.Timestamp, userBannedEvent.Channel);
+                mediator.Send(new SaveSuspensionRequest(suspension));
+            }
 
             return Task.CompletedTask;
         }
@@ -65,13 +63,12 @@ namespace AntiHarassmentLite.Core
             Suspension suspension;
 
             if (RecentChatMessages.TryGetValue(key, out var chatMessages))
+            {
                 suspension = Suspension.CreateTimeout(userTimedoutEvent, chatMessages);
-            else
-                suspension = Suspension.CreateTimeout(userTimedoutEvent);
 
-            logger.LogInformation("Sent save request for: suspension for user: {username}, timestamp: {timestamp} in channel: {channelName}", userTimedoutEvent.Username, userTimedoutEvent.Timestamp, userTimedoutEvent.Channel);
-
-            mediator.Send(new SaveSuspensionRequest(suspension));
+                logger.LogInformation("Sent save request for: suspension for user: {username}, timestamp: {timestamp} in channel: {channelName}", userTimedoutEvent.Username, userTimedoutEvent.Timestamp, userTimedoutEvent.Channel);
+                mediator.Send(new SaveSuspensionRequest(suspension));
+            }
 
             return Task.CompletedTask;
         }
